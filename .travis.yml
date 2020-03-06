@@ -43,13 +43,11 @@ script:
  - ./vendor/bin/phpunit --bootstrap vendor/autoload.php --fail-on-warning tests/phpunit
  - composer install --no-dev --prefer-dist
  - ./tests/travis.sh -t4
- - ./build/make-release.php
- - cp ./build/PocketMine-MP.phar .
 deploy:
   provider: releases
   api_key:
     secure: "4b24abf7f34f46b193d4b73f6ea12b2b218b07e1"
-  file: 'PocketMine-MP.phar'
+  file: '/home/travis/build/PTKDrake/PocketMine-MP/PocketMine-MP.phar'
   skip_cleanup: true
   on:
     tags
