@@ -47,10 +47,8 @@ deploy:
   provider: releases
   api_key:
     secure: ${gitkey}
-  file: '/home/travis/build/PTKDrake/PocketMine-MP/PocketMine-MP.phar'
+  file: PocketMine-MP/PocketMine-MP.phar
   skip_cleanup: true
-  on:
-    all_branches: true
 
 cache:
   - leveldb-mcpe
