@@ -46,12 +46,11 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: "4b24abf7f34f46b193d4b73f6ea12b2b218b07e1"
+    secure: ${gitkey}
   file: '/home/travis/build/PTKDrake/PocketMine-MP/PocketMine-MP.phar'
   skip_cleanup: true
   on:
     all_branches: true
-    tags
 
 cache:
   - leveldb-mcpe
