@@ -43,6 +43,10 @@ script:
  - ./vendor/bin/phpunit --bootstrap vendor/autoload.php --fail-on-warning tests/phpunit
  - composer install --no-dev --prefer-dist
  - ./tests/travis.sh -t4
+ - ./build/make-release.php
+addons:
+  artifacts:
+    working_dir: build
 
 cache:
   - leveldb-mcpe
