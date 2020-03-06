@@ -14,8 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate composer.json and composer.lock
-      run: ls
+    - name: Download binaries
+      run: |
+        wget https://jenkins.pmmp.io/job/PHP-7.3-Aggregate/lastSuccessfulBuild/artifact/PHP-7.3-Linux-x86_64.tar.gz
+        tar -xf PHP-7.3-Linux-x86_64.tar.gz
+        echo phpenv
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
