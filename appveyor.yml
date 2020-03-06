@@ -1,6 +1,4 @@
 image: Ubuntu
 version: PocketMine-MP 4.0.0{build}
-install:
-  - phpenv
 build_script:
   - curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
