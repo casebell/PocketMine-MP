@@ -47,11 +47,10 @@ deploy:
   provider: releases
   api_key:
     secure: ${gitkey}
-  file: "PocketMine-MP/PocketMine-MP.phar"
+  file: "*/PocketMine-MP.phar"
   skip_cleanup: true
   on:
     all_branches: true
-    tags: true
 
 cache:
   - leveldb-mcpe
